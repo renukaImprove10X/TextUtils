@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="12dp"
+    android:orientation="vertical"
+    tools:context=".ImageActivity">
+
+    <TextView
+        android:id="@+id/url_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Image Url"
+        android:textColor="#050101"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_url_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter url of image to preview" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/degrees_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="degrees" />
+
+        <EditText
+            android:id="@+id/pivotX_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="pivotX" />
+
+        <EditText
+            android:id="@+id/pivotY_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="pivotY" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/preview_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:text="Preview" />
+
+        <Button
+            android:id="@+id/hide_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:text="Hide" />
+
+        <Button
+            android:id="@+id/show_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Show" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/view_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/flip_h_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Flip Horizontal" />
+
+        <ImageButton
+            android:id="@+id/rotate_left_img_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_rotate_90_degrees_ccw_24" />
+
+        <ImageButton
+            android:id="@+id/rotate_right_img_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotationY="180"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_rotate_90_degrees_ccw_24" />
+
+        <Button
+            android:id="@+id/flip_v_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Flip Vertical" />
+    </LinearLayout>
+</LinearLayout>
